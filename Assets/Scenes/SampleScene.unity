@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 486014361}
   - component: {fileID: 486014360}
   m_Layer: 0
-  m_Name: SubMono
+  m_Name: SubObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 1920838684}
   - component: {fileID: 1920838683}
   m_Layer: 0
-  m_Name: MainMono
+  m_Name: MainObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

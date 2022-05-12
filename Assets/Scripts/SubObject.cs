@@ -1,6 +1,5 @@
 using UnityEngine;
-
-public class SubMono : MonoBehaviour
+public class SubObject : MonoBehaviour
 {
     [SerializeField] private string[] _strings;
 }

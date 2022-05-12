@@ -1,7 +1,7 @@
 using UnityEditor;
 
-[CustomEditor(typeof(MainMono))]
-public class MainMonoEditor : Editor
+[CustomEditor(typeof(MainObject))]
+public class MainObjectEditor : Editor
 {
     private SerializedProperty _subMono;
 

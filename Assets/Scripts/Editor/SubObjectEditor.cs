@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditorInternal;
 
-[CustomEditor(typeof(SubMono))]
-public class SubMonoEditor : Editor
+[CustomEditor(typeof(SubObject))]
+public class SubObjectEditor : Editor
 {
     private SerializedProperty _strings;
     private ReorderableList _list;
