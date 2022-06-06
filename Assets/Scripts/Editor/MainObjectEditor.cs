@@ -2,19 +2,23 @@ using UnityEditor;
 [CustomEditor(typeof(MainObject))]
 public class MainObjectEditor : Editor
 {
-    private SerializedProperty _subMono;
+    NestedEditorProperty _sub;
     private void OnEnable()
     {
-        _subMono = serializedObject.FindProperty("_subMono");
+        _sub = new NestedEditorProperty(serializedObject.FindProperty("_subMono"));
     }
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
-        EditorGUILayout.PropertyField(_subMono);
-        if (_subMono.objectReferenceValue != null)
+        _sub.LayoutReferenceField();
+        if (_sub.ObjectReferenceValue != null)
         {
-            CreateEditor(_subMono.objectReferenceValue).OnInspectorGUI();
+            _sub.OnInspectorGUI();
         }
         serializedObject.ApplyModifiedProperties();
+    }
+    private void OnDisable()
+    {
+        _sub.OnInspectorGUI();
     }
 }
